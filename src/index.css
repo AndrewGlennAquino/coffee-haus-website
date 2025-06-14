@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+body {
+  @apply font-outfit;
+}
+
+#root {
+  @apply min-h-dvh bg-babypowder;
+}
+
+#root > * {
+  @apply p-4 md:p-8;
+}
+
+@font-face {
+  font-family: Outfit;
+  src: url(./assets/fonts/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: CherryBombOne;
+  src: url(./assets/fonts/CherryBombOne-Regular.ttf);
+}
+
+@theme {
+  --font-cherry: CherryBombOne;
+  --font-outfit: Outfit;
+  --color-coffee: #78573F;
+  --color-babypowder: #fdfdfd;
+  --color-black: #0D0A07;
+}
+
+@layer components {
+  .bar {
+    @apply bg-black w-full h-1.25 rounded-full;
+  }
+}
