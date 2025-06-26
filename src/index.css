@@ -5,11 +5,7 @@ body {
 }
 
 #root {
-  @apply min-h-dvh bg-babypowder;
-}
-
-#root > * {
-  @apply p-4 md:p-8;
+  @apply min-h-screen;
 }
 
 @font-face {
@@ -25,12 +21,16 @@ body {
 @theme {
   --font-cherry: CherryBombOne;
   --font-outfit: Outfit;
-  --color-coffee: #78573F;
-  --color-babypowder: #fdfdfd;
-  --color-black: #0D0A07;
+  --color-coffee: rgba(120, 87, 63, 1);
+  --color-babypowder: rgba(253, 253, 253, 1);
+  --color-black: rgba(13, 10, 7, 1);
 }
 
 @layer components {
+  .mp-default {
+    @apply max-w-[1280px] mx-auto p-4;
+  }
+
   .bar {
     @apply bg-black w-full h-1.25 rounded-full;
   }
